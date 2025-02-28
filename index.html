@@ -154,5 +154,64 @@ whereas the MLT began service in December 1984.</p>
 <br>
 </div>
 
+	<br>
+<br>
+<br>
+<br>
+<br>
+
+<center>
+  <h1 style="font-family: Futura;">Train Ticket Prices</h2>
+
+<div class="container">
+    <form><br>
+      <label style="color: black;">Choose your Destination (One Way): </label>
+      <select class="form-select" id="ticket">
+        <option value="none">Select</option>
+        <option value="13">North Avenue to Quezon Ave</option>
+        <option value="13">North Ave to GMA</option>
+        <option value="16">North Ave to Araneta</option>
+        <option value="16">North Ave to Santolan</option>
+        <option value="20">North Ave to Ortigas</option>
+        <option value="20">North Ave to Shaw Blvd</option>
+        <option value="20">North Ave to Boni</option>
+        <option value="24">North Ave to Guadalupe</option>
+        <option value="24">North Ave to Buendia</option>
+        <option value="24">North Ave to Ayala</option>
+        <option value="28">North Ave to Magallanes</option>
+        <option value="28">North Ave to Taft</option>
+      </select>
+
+    <br>
+
+    <label style="color: black">Discount: </label>
+      <select class="form-select" id="discount">
+        <option value="none">Select</option>
+        <option value="0.2">PWD/Senior Citizen/Student</option>
+        <option value="0">Regular</option>
+      </select>
+
+    <br>
+
+    <button type="button" class="btn btn-warning" onclick="check_discount()">Ticket Price </button>
+      </form>
+
+  </div>
+
+  </center>
+
+  <script>
+
+  function check_discount (){
+
+      var ticket = document.getElementById('ticket').value;
+      var disc = document.getElementById('discount').value;
+      var final_rate = ticket - (disc*ticket);
+
+      window.alert('Your ticket price is ' + final_rate);
+    }
+
+</script>
+
 </body>
 </html>
